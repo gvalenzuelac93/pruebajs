@@ -51,7 +51,7 @@ async function createDataChart() {
     const primeros10dias = serie.slice(0, 10);
 
     primeros10dias.forEach(day => {
-      labels.push(day.fecha);
+      labels.push(day.fecha.split("T")[0]);
       values.push(day.valor);
     });
 
